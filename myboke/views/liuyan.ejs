@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>留言</title>
+</head>
+<body>
+
+<%- include(header.ejs) %>
+	<form action="/users/list" method="post">
+		<div>标题：<input type="text" name="biaoti" class="ipt"/></div>
+		<div>内容：<input type="text" name="con" class="con"></div>
+		
+		
+		<input type="submit" name="发布留言">
+
+	</form>
+
+
+
+	
+</body>
+</html>

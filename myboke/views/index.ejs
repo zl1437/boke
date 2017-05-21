@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css">
+
+</head>
+<body>
+	<div class="in_header">
+		<h1>
+			<dl>
+				<dt><img src="/images/logo1.jpg"></dt>
+				<dd>郑磊的博客</dd>
+			</dl>
+			
+			<div class="in_header_r">
+				<div style="color: #fff;"><%- user %></div>
+			<% if(!user){ %>
+			<button class="btn-group btn" onclick="location.href='/login'">登录</button>
+			<button class="btn btn-default" onclick="location.href='/register'">注册</button>
+			<% }else{ %>
+				<button class="btn btn-group" onclick="localtion.href='/relogin'">退出</button>
+				<button class="btn btn-default" onclick="localtion.href='/liuyan'">留言</button>
+				
+				<% } %>
+				
+				
+			</div>
+		</h1>
+		
+		
+	</div>
+	<div class="in_body">
+		<div class="in_body_l">
+			<h1><a href="###">主页</a></h1>
+			<h1><a href="###">随笔</a></h1>
+			
+			
+		</div>
+		
+		
+		<div class="in_body_r">
+			<% con.forEach(function(item,index){ %>
+				<div class="in_body_con">
+					<h1 style='color:red'><%- item.title %></h1>
+					<p><%- item.content %></p>
+					
+				</div>
+				
+				
+			<% }) %>
+		</div>
+		
+	</div>
+	<div class="footer">
+		<p style="width:100%;height:200px;line-height: 200px;color:#fff;text-align: center;font-size: 40px;">每个人的未来都有无限可能</p>
+		
+	</div>
+
+
+	
+
+
+	
+</body>
+</html>
